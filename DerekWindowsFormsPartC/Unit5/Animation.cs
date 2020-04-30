@@ -12,6 +12,7 @@ namespace WindowsFormsPartC.Unit5
     /// </summary>
     public class Animation
     {
+        
         private Image[] images;
         private int maxnImages = 0;
         private int currentImageNo = 0;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlyMeForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.stopRadioButton = new System.Windows.Forms.RadioButton();
             this.startRadioButton = new System.Windows.Forms.RadioButton();
@@ -37,6 +38,7 @@
             this.animationTimer = new System.Windows.Forms.Timer(this.components);
             this.speedNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.speedScrollbar = new System.Windows.Forms.HScrollBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.copterPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speedNumericUpDown)).BeginInit();
@@ -56,7 +58,7 @@
             this.stopRadioButton.AutoSize = true;
             this.stopRadioButton.Location = new System.Drawing.Point(105, 12);
             this.stopRadioButton.Name = "stopRadioButton";
-            this.stopRadioButton.Size = new System.Drawing.Size(75, 30);
+            this.stopRadioButton.Size = new System.Drawing.Size(108, 41);
             this.stopRadioButton.TabIndex = 1;
             this.stopRadioButton.Text = "Stop";
             this.stopRadioButton.UseVisualStyleBackColor = true;
@@ -67,7 +69,7 @@
             this.startRadioButton.Checked = true;
             this.startRadioButton.Location = new System.Drawing.Point(13, 12);
             this.startRadioButton.Name = "startRadioButton";
-            this.startRadioButton.Size = new System.Drawing.Size(76, 30);
+            this.startRadioButton.Size = new System.Drawing.Size(110, 41);
             this.startRadioButton.TabIndex = 0;
             this.startRadioButton.TabStop = true;
             this.startRadioButton.Text = "Start";
@@ -76,6 +78,7 @@
             // 
             // copterPictureBox
             // 
+            this.copterPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.copterPictureBox.Location = new System.Drawing.Point(192, 59);
             this.copterPictureBox.Name = "copterPictureBox";
             this.copterPictureBox.Size = new System.Drawing.Size(100, 105);
@@ -95,6 +98,7 @@
             // animationTimer
             // 
             this.animationTimer.Enabled = true;
+            this.animationTimer.Interval = 16;
             this.animationTimer.Tick += new System.EventHandler(this.updateCopter);
             // 
             // speedNumericUpDown
@@ -111,7 +115,7 @@
             0,
             0});
             this.speedNumericUpDown.Name = "speedNumericUpDown";
-            this.speedNumericUpDown.Size = new System.Drawing.Size(71, 32);
+            this.speedNumericUpDown.Size = new System.Drawing.Size(71, 44);
             this.speedNumericUpDown.TabIndex = 3;
             this.speedNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speedNumericUpDown.Value = new decimal(new int[] {
@@ -125,24 +129,39 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(240, 494);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 26);
+            this.label1.Size = new System.Drawing.Size(108, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "Speed";
             // 
+            // speedScrollbar
+            // 
+            this.speedScrollbar.Location = new System.Drawing.Point(408, 494);
+            this.speedScrollbar.Maximum = 50;
+            this.speedScrollbar.Minimum = 1;
+            this.speedScrollbar.Name = "speedScrollbar";
+            this.speedScrollbar.Size = new System.Drawing.Size(292, 26);
+            this.speedScrollbar.TabIndex = 5;
+            this.speedScrollbar.Value = 10;
+            this.speedScrollbar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.UpdateSpeed);
+            // 
             // FlyMeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 546);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(893, 609);
+            this.Controls.Add(this.speedScrollbar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.speedNumericUpDown);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.copterPictureBox);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FlyMeForm";
-            this.Text = "Fly With Me Form";
+            this.Text = "Godfrey\'s Fly With Me Form";
             this.Load += new System.EventHandler(this.loadImages);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -163,5 +182,6 @@
         private System.Windows.Forms.Timer animationTimer;
         private System.Windows.Forms.NumericUpDown speedNumericUpDown;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HScrollBar speedScrollbar;
     }
 }
