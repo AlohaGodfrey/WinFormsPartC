@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DerekWindowsFormsPartC;
+using System;
 using System.Windows.Forms;
 using WindowsFormsPartC.Unit5;
 
@@ -24,6 +25,11 @@ namespace WindowsFormsPartC
             {
                 // Tasks 5.3, 5.4 and 5.5
                 FlyMeForm form = new FlyMeForm();
+                form.Show();
+            }
+            else if (GraphicsRadioButton.Checked)
+            {
+                GraphicsForm form = new GraphicsForm();
                 form.Show();
             }
         }

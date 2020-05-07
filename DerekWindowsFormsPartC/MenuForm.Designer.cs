@@ -34,6 +34,7 @@
             this.animationRadioButton = new System.Windows.Forms.RadioButton();
             this.flyMeRadioButton = new System.Windows.Forms.RadioButton();
             this.quitButton = new System.Windows.Forms.Button();
+            this.GraphicsRadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,12 +71,10 @@
             // flyMeRadioButton
             // 
             this.flyMeRadioButton.AutoSize = true;
-            this.flyMeRadioButton.Checked = true;
             this.flyMeRadioButton.Location = new System.Drawing.Point(48, 105);
             this.flyMeRadioButton.Name = "flyMeRadioButton";
             this.flyMeRadioButton.Size = new System.Drawing.Size(496, 41);
             this.flyMeRadioButton.TabIndex = 3;
-            this.flyMeRadioButton.TabStop = true;
             this.flyMeRadioButton.Text = "Task 5.3 Fly With Me Animation";
             this.flyMeRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -89,11 +88,24 @@
             this.quitButton.UseVisualStyleBackColor = true;
             this.quitButton.Click += new System.EventHandler(this.quitForm);
             // 
+            // GraphicsRadioButton
+            // 
+            this.GraphicsRadioButton.AutoSize = true;
+            this.GraphicsRadioButton.Checked = true;
+            this.GraphicsRadioButton.Location = new System.Drawing.Point(48, 152);
+            this.GraphicsRadioButton.Name = "GraphicsRadioButton";
+            this.GraphicsRadioButton.Size = new System.Drawing.Size(264, 41);
+            this.GraphicsRadioButton.TabIndex = 5;
+            this.GraphicsRadioButton.TabStop = true;
+            this.GraphicsRadioButton.Text = "Unit 6 Graphics";
+            this.GraphicsRadioButton.UseVisualStyleBackColor = true;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 679);
+            this.Controls.Add(this.GraphicsRadioButton);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.flyMeRadioButton);
             this.Controls.Add(this.animationRadioButton);
@@ -116,5 +128,6 @@
         private System.Windows.Forms.RadioButton animationRadioButton;
         private System.Windows.Forms.RadioButton flyMeRadioButton;
         private System.Windows.Forms.Button quitButton;
+        private System.Windows.Forms.RadioButton GraphicsRadioButton;
     }
 }
